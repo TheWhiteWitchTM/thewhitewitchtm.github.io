@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
+import Image from "next/image";
+import { Github, Youtube, Twitter, Mailbox } from "lucide-react";
 import "./globals.css";
+import SideBar from "@/app/sidebar";
 
 
 export const metadata: Metadata = {
@@ -14,9 +17,32 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-        {children}
-      </body>
+    <body>
+    <div className="relative w-full h-[100px] overflow-hidden bg-gray-900">
+	    <Image
+		    src="/banner.jpg"           // ← your uploaded image (can be much larger/taller/wider)
+		    alt="Profile banner"
+		    fill
+		    className="object-cover object-center"  // ← this is the magic: crops + centers
+		    priority                                // optional: if it's above the fold
+		    quality={85}                            // balance quality vs file size
+	    />
+    </div>
+    <div className="grid grid-cols-[auto_1fr_auto_auto] gap-3 p-4">
+	    <aside>
+		    <SideBar/>
+	    </aside>
+	    <main>
+		    {children}
+	    </main>
+	    <aside className={"flex flex-row gap-3"}>
+		    <Youtube/><Twitter/><Github/><Mailbox/>
+	    </aside>
+	    <aside>
+		    Toggle
+	    </aside>
+    </div>
+    </body>
     </html>
   );
 }
