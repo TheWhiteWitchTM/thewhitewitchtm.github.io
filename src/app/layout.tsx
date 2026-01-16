@@ -50,7 +50,7 @@ export default function RootLayout({
 	      <Footerr/>
       </div>
     </ThemeProvider>
-    <GoogleAnalytics gaId="G-XXXXXXXXXX" />
+    <GoogleAnalytics gaId="G-520311503" />
     </body>
     </html>
   );
