@@ -26,7 +26,9 @@ export function Header() {
 						</div>
 					</div>
 					<code>
-						Welcome to my Blog!
+						<center>
+							👉🏼FEATURED: X censorship!✨
+						</center>
 					</code>
 				</div>
 				</div>
