@@ -64,6 +64,7 @@ export default function YouTubePlayer({
 		>
 			<YouTubeEmbed
 				videoid={videoId}
+				params={params}
 			/>
 		</div>
 	);
