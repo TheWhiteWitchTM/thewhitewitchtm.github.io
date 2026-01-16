@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import "./globals.css";
 import {ThemeProvider} from "@/witchy/theme-provider";
 import AsideRight from "@/app/aside-right";
 import AsideLeft from "@/app/aside-left";
+import {Header} from "@/app/header";
+import {Footerr} from "@/app/footerr";
 
 
 export const metadata: Metadata = {
@@ -24,28 +25,24 @@ export default function RootLayout({
       defaultTheme="system"
       enableSystem
       disableTransitionOnChange>
-      <div className="relative w-full h-[100px] overflow-hidden bg-gray-900">
-	      <Image
-		      src="/banner.jpg"           // ← your uploaded image (can be much larger/taller/wider)
-		      alt="Profile banner"
-		      fill
-		      className="object-cover object-center"  // ← this is the magic: crops + centers
-		      priority                                // optional: if it's above the fold
-		      quality={85}                            // balance quality vs file size
-	      />
-      </div>
-      <div className="grid grid-cols-[auto_1fr_auto] gap-3 p-4">
-	      <aside>
-		      <AsideLeft/>
-	      </aside>
-	      <main className="mx-auto max-w-[400px] px-4 sm:px-6 lg:px-8 overflow-y-auto">
-		      <article className="prose prose-slate lg:prose-lg mx-auto">
-			      {children}
-		      </article>
-	      </main>
-	      <aside>
-		      <AsideRight/>
-	      </aside>
+      <div className="flex w-w-full min-h-screen flex-col">
+	      <Header/>
+	      <div className="flex-grow">
+		      <div className={"grid grid-cols-[auto_1fr_auto]"}>
+			      <div>
+				      <AsideLeft/>
+			      </div>
+			      <main className="mx-auto max-w-[400px] px-4 sm:px-6 lg:px-8 overflow-y-auto">
+				      <article className="prose prose-slate lg:prose-lg mx-auto">
+					      {children}
+				      </article>
+			      </main>
+			      <div className={"mr-1"}>
+				      <AsideRight/>
+			      </div>
+		      </div>
+	      </div>
+	      <Footerr/>
       </div>
     </ThemeProvider>
     </body>

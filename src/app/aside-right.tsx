@@ -1,16 +1,11 @@
-import Image from "next/image";
 import {Github, Mailbox, Twitter, Youtube} from "lucide-react";
-import {ThemeToggle} from "@/witchy/theme-toggle";
-import {Button} from "@/components/ui/button";
 import {Separator} from "@/components/ui/separator";
 import {GhostButton} from "@/witchy/ui/GhostButton";
 import Link from "next/link";
 
 export default function AsideRight() {
 	return (
-		<div className={"flex flex-col gap-2"}>
-			<ThemeToggle/>
-			<Separator/>
+		<div className={"sticky top-14 flex flex-col gap-2"}>
 			<GhostButton>
 				<Link
 					href={"https://www.youtube.com/@TheWhiteWitchTM"}
