@@ -7,6 +7,7 @@ import AsideRight from "@/app/aside-right";
 import AsideLeft from "@/app/aside-left";
 import {Header} from "@/app/header";
 import {Footerr} from "@/app/footerr";
+import Greeter from "@/app/greeter";
 
 const witchFont = UnifrakturCook({
 	weight: '700',
@@ -34,19 +35,21 @@ export default function RootLayout({
       disableTransitionOnChange>
       <div className="flex w-w-full min-h-screen flex-col">
 	      <Header/>
+	      <Greeter>
 	      <div className="flex-grow">
 		      <div className={"grid grid-cols-[auto_1fr_auto]"}>
 			      <div>
 				      <AsideLeft/>
 			      </div>
 			      <main className="w-full">
-					      {children}
+				      {children}
 			      </main>
 			      <div className={"mr-1"}>
 				      <AsideRight/>
 			      </div>
 		      </div>
 	      </div>
+				</Greeter>
 	      <Footerr/>
       </div>
     </ThemeProvider>
