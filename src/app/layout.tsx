@@ -32,10 +32,8 @@ export default function RootLayout({
 			      <div>
 				      <AsideLeft/>
 			      </div>
-			      <main className="mx-auto max-w-[400px] px-4 sm:px-6 lg:px-8 overflow-y-auto">
-				      <article className="prose prose-slate lg:prose-lg mx-auto">
+			      <main className="w-full">
 					      {children}
-				      </article>
 			      </main>
 			      <div className={"mr-1"}>
 				      <AsideRight/>
