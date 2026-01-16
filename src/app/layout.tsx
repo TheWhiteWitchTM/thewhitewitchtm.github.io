@@ -3,11 +3,11 @@ import { UnifrakturCook } from 'next/font/google';
 import "./globals.css";
 import {ThemeProvider} from "@/witchy/theme-provider";
 import { GoogleAnalytics } from '@next/third-parties/google'
-import AsideRight from "@/app/aside-right";
-import AsideLeft from "@/app/aside-left";
-import {Header} from "@/app/header";
-import {Footerr} from "@/app/footerr";
-import Greeter from "@/app/greeter";
+import AsideRight from "@/witchy/home/aside-right";
+import AsideLeft from "@/witchy/home/aside-left";
+import {Header} from "@/witchy/home/header";
+import {Footerr} from "@/witchy/home/footerr";
+import Greeter from "@/witchy/home/greeter";
 
 const witchFont = UnifrakturCook({
 	weight: '700',
