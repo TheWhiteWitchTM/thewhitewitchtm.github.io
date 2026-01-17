@@ -1,7 +1,5 @@
-import type { ComponentType } from "react";
 import { readdir } from "fs/promises";
 import {Metadata} from "next";
-import ExpandablePostContent from "@/witchy/ExpandablePostContent";
 import {PostExcerpt} from "@/witchy/PostExcerpt";
 
 export interface Post {
