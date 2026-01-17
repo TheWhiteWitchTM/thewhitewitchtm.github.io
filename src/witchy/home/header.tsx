@@ -8,9 +8,9 @@ export function Header() {
 	return(
 		<div className={"z-50 sticky top-0 w-full bg-background overflow-hidden"}>
 			<div className={"grid grid-cols-[auto_1fr]"}>
-				<div>
+				<div className="bg-transparent">
 					<Image
-						src="/logo.jpg"
+						src="/logo.png"
 						alt="TheWhiteWitchTM Logo"
 						width={100}
 						height={100}

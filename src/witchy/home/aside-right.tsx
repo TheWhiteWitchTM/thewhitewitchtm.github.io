@@ -1,4 +1,5 @@
 import {Github, Mailbox, Twitter, Youtube} from "lucide-react";
+import {BluSsky} from "@/witchy/home/BlueSky";
 import {Separator} from "@/components/ui/separator";
 import {GhostButton} from "@/witchy/ui/GhostButton";
 import Link from "next/link";
@@ -14,7 +15,14 @@ export default function AsideRight() {
 					<Youtube/>
 				</Link>
 			</GhostButton>
-				<GhostButton>
+			<GhostButton>
+				<Link
+					href={"https://x.com/thewhitewitchtm"}
+					target={"_blank"}>
+					<BluSsky/>
+				</Link>
+			</GhostButton>
+			<GhostButton>
 					<Link
 						href={"https://x.com/thewhitewitchtm"}
 						target={"_blank"}>

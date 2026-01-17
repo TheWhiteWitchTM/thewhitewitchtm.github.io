@@ -4,7 +4,7 @@ import {Post} from "@/witchy/cms/types"
 import {sortPostsNewest} from "@/witchy/cms/sort";
 import {Separator} from "@/components/ui/separator";
 
-const category = "blog";
+const category = "home";
 const path = "/src/app/(cms)/"+category+"/(posts)/"
 
 async function getPosts(path: string) {
@@ -32,7 +32,7 @@ export default async function () {
 		<div className={"w-full justify-center justify-items-center"}>
 			<div className={"min-w-1/2 max-w-5/6 flex flex-col gap-3 m-3 p-3"}>
 				<h1 className={"text-2xl underline"}>
-					🧙‍♀️️️ My Blog! ✨
+					🧙‍♀️️️ Welcome, to my Home! ✨
 				</h1>
 
 				<div className={"flex flex-col"}>
@@ -40,7 +40,7 @@ export default async function () {
 				{posts? posts.map(Post => (
 					<>
 					<div className={"mr-1"}>
-						👉🏼
+						🧙‍♀️
 					</div>
 					<div className={"mb-1"}>
 						<PostExcerpt
