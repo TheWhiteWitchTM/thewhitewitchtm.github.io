@@ -18,7 +18,6 @@ export function PostExcerpt({
 	                            previewHeight = '10rem',
 	                            minContentHeightToShowButton = 220,
 	                            className,
-	                            gradient = true,
                             }: PostExcerptProps) {
 	const [expanded, setExpanded] = useState(false)
 	const [isLong, setIsLong] = useState(false)
@@ -63,17 +62,12 @@ export function PostExcerpt({
 				{children}
 			</div>
 
-			{gradient && isLong && !expanded && (
-				<div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-background to-transparent pointer-events-none" />
-			)}
-
 			{isLong && (
-				<div className="mt-6 flex justify-center min-h-[3rem] items-center">
+				<div className="flex justify-center min-h-[3rem] items-center">
 					<Button
-						variant={expanded ? "default" : "default"}   // ← "default" (filled) for Read more = more prominent
 						size="sm"
 						onClick={() => setExpanded(!expanded)}
-						className="gap-1.5 px-5 py-2"   // a bit wider + padding
+						className={"h-auto p-0"}   // a bit wider + padding
 					>
 						{expanded ? (
 							<>
@@ -83,7 +77,7 @@ export function PostExcerpt({
 						) : (
 							<>
 								Read more
-								<ChevronDown className="h-4 w-4" />
+								<ChevronDown className={"h-4 w-4"} />
 							</>
 						)}
 					</Button>

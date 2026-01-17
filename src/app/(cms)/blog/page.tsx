@@ -40,7 +40,7 @@ export default async function () {
 					<PostExcerpt
 						previewHeight="5rem"                      // ← lower if you want stricter cutoff
 						minContentHeightToShowButton={180}        // ← increase to 220–280 if button still shows on 1-liners
-						gradient={true}>
+						gradient={false}>
 						<article className={"prose"}>
 							<Post.Content/>
 						</article>
