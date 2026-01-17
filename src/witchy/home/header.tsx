@@ -6,7 +6,7 @@ import {ThemeToggle} from "@/witchy/theme-toggle";
 export function Header() {
 
 	return(
-		<div className={"sticky top-0 w-full bg-background overflow-hidden"}>
+		<div className={"z-50 sticky top-0 w-full bg-background overflow-hidden"}>
 			<div className={"grid grid-cols-[auto_1fr]"}>
 				<div>
 					<Image
