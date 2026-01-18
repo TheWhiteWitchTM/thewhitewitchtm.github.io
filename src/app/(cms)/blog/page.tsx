@@ -46,7 +46,7 @@ export default async function () {
 					</div>
 					<div className={"mb-1"}>
 						<PostExcerpt
-							previewHeight="5rem"                      // ← lower if you want stricter cutoff
+							previewHeight="9rem"                      // ← lower if you want stricter cutoff
 							minContentHeightToShowButton={180}        // ← increase to 220–280 if button still shows on 1-liners
 							gradient={false}>
 							<article className={"prose"}>
